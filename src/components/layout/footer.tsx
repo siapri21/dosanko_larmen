@@ -1,45 +1,136 @@
 export default function Footer() {
-    return (
-      <footer className="hidden md:block bg-surface border-t border-outline-variant/20 mt-20">
-        <div className="max-w-[1200px] mx-auto px-6 py-12 grid grid-cols-3 gap-8">
-  
+  return (
+    <footer >
+      <div style={{
+        background: '#1c1b1b',
+        borderTop: '1px solid rgba(91,64,61,0.2)',
+        marginTop: '80px',
+      }}>
+        <div style={{
+          maxWidth: '1200px', margin: '0 auto',
+          padding: '80px 48px',
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr 1fr',
+          gap: '64px',
+        }}>
+
+          {/* Colonne 1 */}
           <div>
-            <p className="font-display text-2xl font-bold text-primary mb-1">どさん子</p>
-            <p className="text-xs font-ui tracking-[0.15em] uppercase text-secondary mb-4">
+            <p style={{
+              fontFamily: '"Shippori Mincho", serif',
+              fontSize: '32px', fontWeight: 800,
+              color: '#ffb3ac', marginBottom: '8px',
+            }}>
+              どさん子
+            </p>
+            <p style={{
+              fontFamily: 'Inter, sans-serif', fontSize: '10px',
+              fontWeight: 700, letterSpacing: '0.25em',
+              textTransform: 'uppercase', color: '#e3c199',
+              marginBottom: '24px',
+            }}>
               Dosanko Larmen — Depuis 1961
             </p>
-            <p className="text-sm font-body text-on-surface-variant/70 leading-relaxed">
-              Ramen traditionnel de Sapporo,<br />au cœur de Paris depuis plus de 50 ans.
+            <p style={{
+              fontFamily: '"Newsreader", serif', fontSize: '15px',
+              color: 'rgba(228,190,186,0.55)', lineHeight: 1.8,
+            }}>
+              Ramen traditionnel de Sapporo,<br />
+              au cœur de Paris depuis plus de 50 ans.
             </p>
           </div>
-  
+
+          {/* Colonne 2 */}
           <div>
-            <p className="text-xs font-ui font-semibold tracking-[0.2em] uppercase text-secondary mb-4">Adresses</p>
-            <div className="space-y-3 text-sm font-body text-on-surface-variant">
+            <p style={{
+              fontFamily: 'Inter, sans-serif', fontSize: '11px',
+              fontWeight: 700, letterSpacing: '0.25em',
+              textTransform: 'uppercase', color: '#e3c199',
+              marginBottom: '28px',
+            }}>
+              Adresses
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               <div>
-                <p className="text-on-surface font-medium">Sainte-Anne</p>
-                <p>40 rue Sainte-Anne, 75002 Paris</p>
+                <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', fontWeight: 600, color: '#e5e2e1', marginBottom: '4px' }}>
+                  Sainte-Anne
+                </p>
+                <p style={{ fontFamily: '"Newsreader", serif', fontSize: '15px', color: 'rgba(228,190,186,0.55)' }}>
+                  40 rue Sainte-Anne
+                </p>
+                <p style={{ fontFamily: '"Newsreader", serif', fontSize: '15px', color: 'rgba(228,190,186,0.55)' }}>
+                  75002 Paris
+                </p>
               </div>
               <div>
-                <p className="text-on-surface font-medium">Petits Champs</p>
-                <p>30 rue des Petits Champs, 75002 Paris</p>
+                <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', fontWeight: 600, color: '#e5e2e1', marginBottom: '4px' }}>
+                  Petits Champs
+                </p>
+                <p style={{ fontFamily: '"Newsreader", serif', fontSize: '15px', color: 'rgba(228,190,186,0.55)' }}>
+                  30 rue des Petits Champs
+                </p>
+                <p style={{ fontFamily: '"Newsreader", serif', fontSize: '15px', color: 'rgba(228,190,186,0.55)' }}>
+                  75002 Paris
+                </p>
               </div>
             </div>
           </div>
-  
+
+          {/* Colonne 3 */}
           <div>
-            <p className="text-xs font-ui font-semibold tracking-[0.2em] uppercase text-secondary mb-4">Horaires</p>
-            <div className="space-y-1 text-sm font-body text-on-surface-variant">
-              <p><span className="text-on-surface">Lun – Ven</span> · 12h–15h / 17h–22h30</p>
-              <p><span className="text-on-surface">Sam – Dim</span> · 12h–15h30 / 18h–22h30</p>
-              <p className="mt-3 text-xs text-on-surface-variant/50">Tél : 01 72 63 63 55</p>
+            <p style={{
+              fontFamily: 'Inter, sans-serif', fontSize: '11px',
+              fontWeight: 700, letterSpacing: '0.25em',
+              textTransform: 'uppercase', color: '#e3c199',
+              marginBottom: '28px',
+            }}>
+              Horaires
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <div>
+                <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', fontWeight: 600, color: '#e5e2e1', marginBottom: '4px' }}>
+                  Lundi – Vendredi
+                </p>
+                <p style={{ fontFamily: '"Newsreader", serif', fontSize: '15px', color: 'rgba(228,190,186,0.55)' }}>
+                  12h00 – 15h00
+                </p>
+                <p style={{ fontFamily: '"Newsreader", serif', fontSize: '15px', color: 'rgba(228,190,186,0.55)' }}>
+                  17h00 – 22h30
+                </p>
+              </div>
+              <div>
+                <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', fontWeight: 600, color: '#e5e2e1', marginBottom: '4px' }}>
+                  Samedi – Dimanche & Jours fériés
+                </p>
+                <p style={{ fontFamily: '"Newsreader", serif', fontSize: '15px', color: 'rgba(228,190,186,0.55)' }}>
+                  12h00 – 15h30
+                </p>
+                <p style={{ fontFamily: '"Newsreader", serif', fontSize: '15px', color: 'rgba(228,190,186,0.55)' }}>
+                  18h00 – 22h30
+                </p>
+              </div>
+              <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: 'rgba(228,190,186,0.35)', marginTop: '8px' }}>
+                Tél : <span style={{ color: '#e5e2e1' }}>01 72 63 63 55</span>
+              </p>
             </div>
           </div>
-  
+
         </div>
-        <div className="border-t border-outline-variant/10 py-4 text-center text-xs font-ui text-on-surface-variant/30">
-          © 2026 Dosanko Larmen Paris · 創業昭和三十六年
+
+        {/* Bas du footer */}
+        <div style={{
+          borderTop: '1px solid rgba(91,64,61,0.15)',
+          padding: '24px 48px',
+          textAlign: 'center',
+        }}>
+          <p style={{
+            fontFamily: 'Inter, sans-serif', fontSize: '12px',
+            color: 'rgba(228,190,186,0.25)', letterSpacing: '0.05em',
+          }}>
+            © 2026 Dosanko Larmen Paris · 創業昭和三十六年
+          </p>
         </div>
-      </footer>
-    )
-  }
+      </div>
+    </footer>
+  )
+}

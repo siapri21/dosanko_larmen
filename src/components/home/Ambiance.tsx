@@ -1,11 +1,11 @@
 import SectionTitle from '../UI/UX/SectionTitle'
 
 const photos = [
-  { src: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80', alt: 'Salle du restaurant', grid: 'col-span-2 row-span-2' },
-  { src: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=600&q=80', alt: 'Ramen', grid: 'col-span-1 row-span-1' },
-  { src: 'https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=600&q=80', alt: 'Shoyu', grid: 'col-span-1 row-span-1' },
-  { src: 'https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=600&q=80', alt: 'Gyoza', grid: 'col-span-1 row-span-1' },
-  { src: 'https://images.unsplash.com/photo-1526318896980-cf78c088247c?w=600&q=80', alt: 'Ramen froid', grid: 'col-span-1 row-span-1' },
+  { src: '/salledosa.jpeg', alt: 'Salle du restaurant' },
+  { src: '/devanture.jpeg', alt: 'Devanture Sainte-Anne' },
+  { src: 'https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=600&q=80', alt: 'Ramen miso' },
+  { src: '/devanture2.jpeg', alt: 'Devanture Petits Champs' },
+  { src: 'https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=600&q=80', alt: 'Gyoza' },
 ]
 
 export default function Ambiance() {
@@ -17,13 +17,15 @@ export default function Ambiance() {
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(4, 1fr)',
-          gridTemplateRows: 'repeat(2, 220px)',
+          gridTemplateRows: 'repeat(2, 240px)',
           gap: '8px',
           marginTop: '16px',
         }}>
+          {/* Grande image à gauche */}
           <div style={{ gridColumn: 'span 2', gridRow: 'span 2', overflow: 'hidden', borderRadius: '2px' }}>
             <img src={photos[0].src} alt={photos[0].alt} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
           </div>
+          {/* 4 petites images à droite */}
           {photos.slice(1).map((p, i) => (
             <div key={i} style={{ overflow: 'hidden', borderRadius: '2px' }}>
               <img src={p.src} alt={p.alt} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />

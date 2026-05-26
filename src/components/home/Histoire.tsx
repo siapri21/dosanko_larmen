@@ -15,7 +15,7 @@ export default function Histoire() {
           {/* Image */}
           <div style={{ position: 'relative', aspectRatio: '4/5', overflow: 'hidden', borderRadius: '2px' }}>
             <img
-              src="https://images.unsplash.com/photo-1591814468924-caf88d1232e1?w=800&q=80"
+              src="/salledosa.jpeg"
               alt="Histoire Dosanko"
               style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
             />

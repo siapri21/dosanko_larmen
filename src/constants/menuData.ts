@@ -1,4 +1,4 @@
-export type Dish = {
+export interface Dish {
     id: string
     name: string
     nameJp?: string
@@ -8,7 +8,7 @@ export type Dish = {
     badges?: string[]
   }
   
-  export type MenuCategory = {
+  export interface MenuCategory {
     id: string
     label: string
     labelJp?: string
@@ -19,12 +19,12 @@ export type Dish = {
     misoRouge: 'https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=600&q=80',
     misoBlanc: 'https://images.unsplash.com/photo-1591814468924-caf88d1232e1?w=600&q=80',
     shoyu: 'https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=600&q=80',
-    shio: 'https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=600&q=80',
-    yasai: 'https://images.unsplash.com/photo-1555126634-323283e090fa?w=600&q=80',
+    shio: 'https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600&q=80',
+    yasai: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&q=80',
     kaisen: 'https://images.unsplash.com/photo-1534482421-64566f976cfa?w=600&q=80',
-    karanegi: 'https://images.unsplash.com/photo-1548943487-a2e4e43b4853?w=600&q=80',
+    karanegi: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=600&q=80',
     tsukemen: 'https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=600&q=80',
-    donburiBeef: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=80',
+    donburiBeef: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80',
     donburiPork: 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=600&q=80',
     gyoza: 'https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=600&q=80',
     edamame: 'https://images.unsplash.com/photo-1564894809611-1742fc40ed80?w=600&q=80',
@@ -208,6 +208,115 @@ export type Dish = {
           description: 'Au choix : Fraise, Matcha, Sésame noir.',
           image: UNSPLASH.mochi,
           price: [{ label: 'Prix', amount: 3.80 }],
+        },
+      ],
+    },
+    {
+      id: 'boissons',
+      label: 'Boissons',
+      labelJp: '飲み物',
+      dishes: [
+        {
+          id: 'asahi-pression-25',
+          name: 'Bière Asahi Pression 25cl',
+          nameJp: 'アサヒ生ビール',
+          description: 'Bière japonaise Asahi en pression, verre 25cl.',
+          image: 'https://images.unsplash.com/photo-1608270586620-248524c67de9?w=600&q=80',
+          price: [{ label: 'Prix', amount: 5.00 }],
+          badges: ['Alcool'],
+        },
+        {
+          id: 'asahi-pression-50',
+          name: 'Bière Asahi Pression 50cl',
+          nameJp: 'アサヒ生ビール',
+          description: 'Bière japonaise Asahi en pression, verre 50cl.',
+          image: 'https://images.unsplash.com/photo-1608270586620-248524c67de9?w=600&q=80',
+          price: [{ label: 'Prix', amount: 7.00 }],
+          badges: ['Alcool'],
+        },
+        {
+          id: 'asahi-bouteille',
+          name: 'Bière Asahi Bouteille 33cl',
+          nameJp: 'アサヒビール瓶',
+          description: 'Bière japonaise Asahi en bouteille 33cl.',
+          image: 'https://images.unsplash.com/photo-1608270586620-248524c67de9?w=600&q=80',
+          price: [{ label: 'Prix', amount: 5.50 }],
+          badges: ['Alcool'],
+        },
+        {
+          id: 'sake',
+          name: 'Saké Japonais SHO CHIKU BAI',
+          nameJp: '松竹梅',
+          description: 'Saké japonais en bouteille 18cl. Chaud ou froid.',
+          image: 'https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=600&q=80',
+          price: [{ label: 'Prix', amount: 7.80 }],
+          badges: ['Alcool'],
+        },
+        {
+          id: 'umai',
+          name: 'Umai — Alcool de Riz',
+          nameJp: 'うまい',
+          description: 'Alcool de riz japonais, verre 12cl.',
+          image: 'https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=600&q=80',
+          price: [{ label: 'Prix', amount: 5.80 }],
+          badges: ['Alcool'],
+        },
+        {
+          id: 'the-vert',
+          name: 'Thé Vert Chaud',
+          nameJp: '緑茶',
+          description: 'Thé vert japonais chaud.',
+          image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&q=80',
+          price: [{ label: 'Prix', amount: 1.80 }],
+        },
+        {
+          id: 'the-vert-froid',
+          name: 'Thé Vert Froid 33cl',
+          nameJp: '緑茶アイス',
+          description: 'Thé vert japonais froid en bouteille 33cl.',
+          image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&q=80',
+          price: [{ label: 'Prix', amount: 3.80 }],
+        },
+        {
+          id: 'lipton',
+          name: 'Lipton Ice Tea 33cl',
+          nameJp: 'アイスティー',
+          description: 'Thé glacé Lipton en bouteille 33cl.',
+          image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&q=80',
+          price: [{ label: 'Prix', amount: 3.80 }],
+        },
+        {
+          id: 'ramune',
+          name: 'Ramune — Limonade Japonaise',
+          nameJp: 'ラムネ',
+          description: 'Limonade japonaise gazeuse en bouteille 20cl. Sans alcool.',
+          image: 'https://images.unsplash.com/photo-1625772452859-1c03d884dcd7?w=600&q=80',
+          price: [{ label: 'Prix', amount: 5.00 }],
+          badges: ['Sans alcool'],
+        },
+        {
+          id: 'coca',
+          name: 'Coca-Cola / Coca Zéro 33cl',
+          nameJp: 'コカコーラ',
+          description: 'Coca-Cola ou Coca-Cola Zéro en canette 33cl.',
+          image: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=600&q=80',
+          price: [{ label: 'Prix', amount: 3.80 }],
+        },
+        {
+          id: 'badoit',
+          name: 'Badoit 1L',
+          nameJp: 'ミネラルウォーター',
+          description: 'Eau gazeuse Badoit en bouteille 1L.',
+          image: 'https://images.unsplash.com/photo-1564419320461-6870880221ad?w=600&q=80',
+          price: [{ label: 'Prix', amount: 4.50 }],
+        },
+        {
+          id: 'evian',
+          name: 'Evian 1L',
+          nameJp: 'エビアン',
+          description: 'Eau plate Evian en bouteille 1L.',
+          image: 'https://images.unsplash.com/photo-1564419320461-6870880221ad?w=600&q=80',
+          price: [{ label: 'Prix', amount: 4.50 }],
         },
       ],
     },
